@@ -10,6 +10,7 @@ const db= mysql.createConnection({
     database: "marketplace",
 });
 
+
 app.get("/", (req, res)=>{
     res.json("hello, this is the backend")
 })
