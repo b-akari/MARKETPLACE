@@ -1,5 +1,6 @@
 import express from "express"
 import mysql from "mysql"
+import cors from 'cors'
 const app= express()
 
 
@@ -10,6 +11,8 @@ const db= mysql.createConnection({
     database: "marketplace",
 });
 
+app.use(express.json())
+app.use(cors())
 
 app.get("/", (req, res)=>{
     res.json("hello, this is the backend")
@@ -26,14 +29,14 @@ app.get("/shoes", (req, res)=>{
 app.post("/shoes", (req, res)=>{
     const q= "INSERT INTO shoes (`id`, `prod_name`, `prod_description`, `image`) VALUES(?)";
     const values = [
-        "222",
-        "item 3",
-        "item3 description",
-        "item 3 image"
+        req.body.id,
+        req.body.prod_name,
+        req.body.prod_description,
+        req.body.image,
     ];
     db.query(q, [values], (err, data)=>{
         if(err) return res.json(err)
-        res.json(data)
+        return res.json("Successfully executed")
     } )
 })
 
