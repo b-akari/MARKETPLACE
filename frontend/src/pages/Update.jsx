@@ -21,13 +21,15 @@ const Update = () => {
   const handleClick = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:8080/shoes/${shoeId}`, shoe)
-        
-      navigate("/");
+      let result = await axios
+      .put(`http://localhost:8080/shoes/${shoeId}`, shoe)
+      .then((result)=> result.data)  
+      console.log(result)
+      navigate("/")
     } catch (err) {
-      console.log(err);
+      console.log(err)
     }
-  };
+  }
   console.log(shoe);
   return (
     <div className="form">
