@@ -54,13 +54,13 @@ app.delete("/shoes/:id", (req, res)=>{
 
 app.put("/shoes/:id", (req, res)=>{
     const shoeId= req.params.id
-    const q= "UPDATE shoes SET `prod_name`=?, `prod_description`=?, `image`=?, `price=`? WHERE id=?"
+    const q= "UPDATE shoes SET `prod_name`=?, `prod_description`=?, `image`=?, `price`=? WHERE id=?"
 
     const values = [
         req.body.prod_name,
         req.body.prod_description,
         req.body.image,
-        req.body.price,
+        req.body.price
     ];
 
     db.query(q, [...values, shoeId], (err, data) => {
