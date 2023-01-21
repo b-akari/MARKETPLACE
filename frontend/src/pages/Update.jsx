@@ -1,9 +1,65 @@
-import React from 'react'
+import React from "react";
+import { useState } from "react";
+import axios from "axios";
+import { useLocation, useNavigate } from "react-router-dom";
 
-const Update = ()=>{
-    return(
-        <div>Update</div>
-    )
-}
+const Update = () => {
+  const [shoe, setShoe] = useState({
+    prod_name: "",
+    prod_description: "",
+    price: null,
+    image: "",
+  });
+  const navigate = useNavigate();
+  const location= useLocation();
+  const shoeId= location.pathname.split("/")[2]
 
-export default Update
+  const handleChange = (e) => {
+    setShoe((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleClick = async (e) => {
+    e.preventDefault();
+    try {
+      await axios.put(`http://localhost:8080/shoes/${shoeId}`, shoe)
+        
+      navigate("/");
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  console.log(shoe);
+  return (
+    <div className="form">
+      <h1>Update</h1>
+      <input
+        type="text"
+        placeholder="name"
+        onChange={handleChange}
+        name="prod_name"
+      />
+      <input
+        type="text"
+        placeholder="prod_description"
+        onChange={handleChange}
+        name="prod_description"
+      />
+      <input
+        type="text"
+        placeholder="image"
+        onChange={handleChange}
+        name="image"
+      />
+      <input
+        type="number"
+        placeholder="price"
+        onChange={handleChange}
+        name="price"
+      />
+
+      <button onClick={handleClick}>Update</button>
+    </div>
+  );
+};
+
+export default Update;
