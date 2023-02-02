@@ -8,6 +8,7 @@ import Add from "./pages/Add";
 import Shoes from "./pages/Shoes";
 import Update from "./pages/Update";
 import "./style.css"
+import Navbar from "./pages/Navbar" //added
 
 
 function App() {
@@ -18,6 +19,8 @@ function App() {
         <Route path="/" element={<Shoes/>}></Route>
         <Route path="/add" element={<Add/>}></Route>
         <Route path="/update/:id" element={<Update/>}></Route>
+        {/* added */}
+        <Route path="/" element={<Navbar/>}></Route> 
       </Routes>
       </BrowserRouter>
     </div>
