@@ -44,7 +44,7 @@ const Shoes = () => {
             <Card sx={{ background: "#E9E8E8"}}>
               <div className="shoe" key={shoe.id}>
                 {shoe.image && <img src={`/image/${shoe.image}`} alt="" />}
-                <Typography variant="h4">
+                <Typography variant="h5">
                   {shoe.prod_name}
                 </Typography>
                 <Typography variant="p">

@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { TextField, Typography } from "@mui/material";
 
 const Add = () => {
   const [shoe, setShoe] = useState({
@@ -29,8 +30,39 @@ const Add = () => {
   };
   console.log(shoe);
   return (
-    <div className="form">
-      <h1>Add New Item</h1>
+    
+      <div className="form">
+      <Typography variant="h3" sx={{fontWeight: "bold"}}>
+        Add New Item
+      </Typography>
+      {/* <TextField 
+        id="outlined"
+        type={"text"}
+        label="name"
+        onChange={handleChange}
+        variant="outlined"
+      />
+      <TextField 
+        id="outlined"
+        type={"text"}
+        label="prod_description"
+        onChange={handleChange}
+        variant="outlined"
+      />
+      <TextField 
+        id="outlined"
+        type={"text"}
+        label="image"
+        onChange={handleChange}
+        variant="outlined"
+      />
+      <TextField 
+        id="outlined"
+        type={"number"}
+        label="price"
+        onChange={handleChange}
+        variant="outlined"
+      /> */}
       <input
         type="text"
         placeholder="name"
@@ -58,6 +90,8 @@ const Add = () => {
 
       <button onClick={handleClick}>Add</button>
     </div>
+    
+    
   );
 };
 

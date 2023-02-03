@@ -19,6 +19,7 @@
     flex-direction: column;
     gap: 10px;
     align-items: center;
+    height: 600px;
 }
 img{
     width: 300px;
@@ -27,8 +28,30 @@ img{
     /* object-fit: cover; */
     background-color: aquamarine;
 }
-/* .form{
+.form{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     gap: 20px;
-} */
+    align-items: center;
+    justify-content: center;
+}
+.form input{
+    background-color: pink;
+    width: 100%;
+    border-radius: 10px;
+    border-color: none;
+    border: 0;
+    padding: 20px;
+}
+.form button{
+    background-color: pink;
+    width: fit-content;
+    border-radius: 10px;
+    border-color: none;
+    border: 0;
+    padding: 15px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.5rem;
+}

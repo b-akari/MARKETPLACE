@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
+import { Typography } from "@mui/material";
 
 const Update = () => {
   const [shoe, setShoe] = useState({
@@ -33,7 +34,9 @@ const Update = () => {
   console.log(shoe);
   return (
     <div className="form">
-      <h1>Update</h1>
+      <Typography variant="h3" sx={{fontWeight: "bold"}}>
+        Update
+      </Typography>
       <input
         type="text"
         placeholder="name"
