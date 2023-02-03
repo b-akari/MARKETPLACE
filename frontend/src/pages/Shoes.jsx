@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import axios from "axios";
 import { Link } from "react-router-dom";
-import { Card, Grid } from "@mui/material";
+import { Card, Grid, Button, Typography} from "@mui/material";
 
 let PHPPrice = new Intl.NumberFormat("en-PH", {
   style: "currency",
@@ -35,34 +35,42 @@ const Shoes = () => {
 
   return (
     <div className="home">
-      <h1>THE GARDEN</h1>
-      <div className="shoes">
+      <Typography variant="h3">
+        SHOE STORE
+      </Typography>
+      <Grid container columnSpacing={2} rowSpacing={2}>
         {shoes.map((shoe) => (
           <Grid key={shoe.id} item xs={12} sm={6} md={3}>
-            <Card sx={{ background: "#EBECF0" }}>
+            <Card sx={{ background: "#E9E8E8"}}>
               <div className="shoe" key={shoe.id}>
                 {shoe.image && <img src={`/image/${shoe.image}`} alt="" />}
-                <h2>{shoe.prod_name}</h2>
-                <p>{shoe.prod_description}</p>
-                <h5>{PHPPrice.format(shoe.price)}</h5>
-                <button
-                  className="delete"
+                <Typography variant="h4">
+                  {shoe.prod_name}
+                </Typography>
+                <Typography variant="p">
+                  {shoe.prod_description}
+                </Typography>
+                <Typography variant="h6">
+                  {PHPPrice.format(shoe.price)}
+                </Typography>
+                <Button
+                  variant="contained"
                   onClick={() => handleDelete(shoe.id)}
                 >
                   Delete
-                </button>
-                <button className="update">
+                </Button>
+                <Button variant="contained" sx={{textDecoration: "none", color: "white"}}>
                   <Link to={`/update/${shoe.id}`}>Update</Link>
-                </button>
+                </Button>
               </div>{" "}
             </Card>{" "}
           </Grid>
         ))}
-      </div>
+      </Grid>
 
-      <button className="add">
+      <Button variant="contained" sx={{m: "20px", textDecoration: "none"}}>
         <Link to="/add">Add new Shoes</Link>
-      </button>
+      </Button>
     </div>
   );
 };
