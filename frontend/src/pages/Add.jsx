@@ -2,13 +2,13 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, TextField} from "@mui/material";
 
 const Add = () => {
   const [shoe, setShoe] = useState({
     prod_name: "",
     prod_description: "",
-    price: null,
+    price: 0,
     image: "",
   });
   const navigate = useNavigate();
@@ -35,57 +35,37 @@ const Add = () => {
       <Typography variant="h3" sx={{fontWeight: "bold"}}>
         Add New Item
       </Typography>
-      {/* <TextField 
+      <TextField 
         id="outlined"
         type={"text"}
-        label="name"
+        label="Name"
+        name="name"
         onChange={handleChange}
         variant="outlined"
       />
       <TextField 
         id="outlined"
         type={"text"}
-        label="prod_description"
+        label="Description"
+        name="prod_description"
         onChange={handleChange}
         variant="outlined"
       />
       <TextField 
         id="outlined"
         type={"text"}
-        label="image"
+        label="Image"
+        name="image"
         onChange={handleChange}
         variant="outlined"
       />
       <TextField 
         id="outlined"
         type={"number"}
-        label="price"
+        label="Price"
+        name="price"
         onChange={handleChange}
         variant="outlined"
-      /> */}
-      <input
-        type="text"
-        placeholder="Name"
-        onChange={handleChange}
-        name="prod_name"
-      />
-      <input
-        type="text"
-        placeholder="Description"
-        onChange={handleChange}
-        name="prod_description"
-      />
-      <input
-        type="text"
-        placeholder="Image"
-        onChange={handleChange}
-        name="image"
-      />
-      <input
-        type="number"
-        placeholder="Price"
-        onChange={handleChange}
-        name="price"
       />
 
       <Button onClick={handleClick} variant="contained" size="large"

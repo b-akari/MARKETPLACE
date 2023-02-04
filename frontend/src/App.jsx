@@ -1,9 +1,9 @@
-import { AppBar, Box, Button, Link, Toolbar, Typography } from "@mui/material";
+import { AppBar, Box, Button, Toolbar, Typography } from "@mui/material";
 import {
   BrowserRouter,
   Routes,
   Route,
-
+  Link
 } from "react-router-dom";
 import Aboutus from "./pages/Aboutus";
 import Add from "./pages/Add";
@@ -22,24 +22,23 @@ function App() {
           <Typography variant="h5" sx={{alignItems: "center", justifyContent: "center"}}>
             Shoe Store
           </Typography>
-          <Box>
+          
             <Link to="/" style={{textDecoration: "none", float: "right"}}>
               <Button sx={{color: "white"}}>Home</Button>
             </Link>
-          </Box>
-          <Box>
+          
+          
             <Link to="/about-us" style={{textDecoration: "none"}}>
               <Button sx={{color: "white"}}>About Us</Button>
             </Link>
-          </Box>
-          <Box>
+          
+         
             <Link to="/shoes" style={{textDecoration: "none"}}>
               <Button sx={{color: "white"}}>Products</Button>
             </Link>
-          </Box>
+          
         </Toolbar>
       </AppBar>
-      
       
       <Routes>
         <Route path="/" element={<Home/>}></Route>

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Typography, Button } from "@mui/material";
+import { Typography, Button, TextField } from "@mui/material";
 
 const Update = () => {
   const [shoe, setShoe] = useState({
@@ -37,7 +37,39 @@ const Update = () => {
       <Typography variant="h3" sx={{fontWeight: "bold"}}>
         Update
       </Typography>
-      <input
+      <TextField 
+        id="outlined"
+        type={"text"}
+        label="Name"
+        name="name"
+        onChange={handleChange}
+        variant="outlined"
+      />
+      <TextField 
+        id="outlined"
+        type={"text"}
+        label="Description"
+        name="prod_description"
+        onChange={handleChange}
+        variant="outlined"
+      />
+      <TextField 
+        id="outlined"
+        type={"text"}
+        label="Image"
+        name="image"
+        onChange={handleChange}
+        variant="outlined"
+      />
+      <TextField 
+        id="outlined"
+        type={"number"}
+        label="Price"
+        name="price"
+        onChange={handleChange}
+        variant="outlined"
+      />
+      {/* <input
         type="text"
         placeholder="name"
         onChange={handleChange}
@@ -60,7 +92,7 @@ const Update = () => {
         placeholder="price"
         onChange={handleChange}
         name="price"
-      />
+      /> */}
 
       <Button onClick={handleClick} variant="contained" size="large"
       sx={{backgroundColor: "#82AAE3"}}>

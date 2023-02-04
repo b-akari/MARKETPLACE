@@ -60,7 +60,7 @@ const Shoes = () => {
                   >
                     Delete
                   </Button>
-                  <Button variant="contained" sx={{textDecoration: "none", backgroundColor: "#82AAE3"}}>
+                  <Button variant="contained" sx={{textDecoration: "none", backgroundColor: "#82AAE3", "&:hover":{background: "#82AAE3"}}}>
                     <Link to={`/update/${shoe.id}`} style={{textDecoration: "none", color: "white"}}>
                       Update
                     </Link>

@@ -32,7 +32,7 @@ img{
     object-fit: cover;
     background-color: aquamarine;
 }
-.form{
+/* .form{
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -47,4 +47,4 @@ img{
     border-color: none;
     border: 0;
     padding: 20px;
-}
+} */
