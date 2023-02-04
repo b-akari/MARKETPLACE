@@ -33,7 +33,7 @@ img{
     height: 300px;
     /* object-fit: fill; */
     object-fit: cover;
-    background-color: aquamarine;
+    /* background-color: aquamarine; */
 }
 /* .form{
     height: 100vh;

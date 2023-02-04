@@ -54,6 +54,7 @@ const Shoes = () => {
         <ToggleButton value="">All</ToggleButton>
         <ToggleButton value="nike">Nike</ToggleButton>
         <ToggleButton value="adidas">Adidas</ToggleButton>
+        <ToggleButton value="new balance">New Balance</ToggleButton>
       </ToggleButtonGroup>
       <Grid container columnSpacing={2} rowSpacing={2} justifyContent="center">
         {shoes

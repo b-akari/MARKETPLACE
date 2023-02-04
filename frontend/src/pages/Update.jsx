@@ -26,7 +26,7 @@ const Update = () => {
       .put(`http://localhost:8080/shoes/${shoeId}`, shoe)
       .then((result)=> result.data)  
       console.log(result)
-      navigate("/")
+      navigate("/shoes")
     } catch (err) {
       console.log(err)
     }
