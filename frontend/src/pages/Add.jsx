@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Typography, Button, TextField} from "@mui/material";
+import { Typography, Button, TextField } from "@mui/material";
 
 const Add = () => {
   const [shoe, setShoe] = useState({
@@ -23,27 +23,26 @@ const Add = () => {
         .post("http://localhost:8080/shoes", shoe)
         .then((result) => result.data);
       console.log(result);
-      navigate("/");
+      navigate("/shoes");
     } catch (err) {
       console.log(err);
     }
   };
   console.log(shoe);
   return (
-    
-      <div className="form">
-      <Typography variant="h3" sx={{fontWeight: "bold"}}>
+    <div className="form">
+      <Typography variant="h3" sx={{ fontWeight: "bold" }}>
         Add New Item
       </Typography>
-      <TextField 
+      <TextField
         id="outlined"
         type={"text"}
         label="Name"
-        name="name"
+        name="prod_name"
         onChange={handleChange}
         variant="outlined"
       />
-      <TextField 
+      <TextField
         id="outlined"
         type={"text"}
         label="Description"
@@ -51,7 +50,7 @@ const Add = () => {
         onChange={handleChange}
         variant="outlined"
       />
-      <TextField 
+      <TextField
         id="outlined"
         type={"text"}
         label="Image"
@@ -59,7 +58,7 @@ const Add = () => {
         onChange={handleChange}
         variant="outlined"
       />
-      <TextField 
+      <TextField
         id="outlined"
         type={"number"}
         label="Price"
@@ -68,13 +67,15 @@ const Add = () => {
         variant="outlined"
       />
 
-      <Button onClick={handleClick} variant="contained" size="large"
-      sx={{backgroundColor: "#82AAE3"}}>
+      <Button
+        onClick={handleClick}
+        variant="contained"
+        size="large"
+        sx={{ backgroundColor: "#82AAE3" }}
+      >
         Add
       </Button>
     </div>
-    
-    
   );
 };
 

@@ -41,7 +41,7 @@ const Update = () => {
         id="outlined"
         type={"text"}
         label="Name"
-        name="name"
+        name="prod_name"
         onChange={handleChange}
         variant="outlined"
       />
