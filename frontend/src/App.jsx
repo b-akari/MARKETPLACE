@@ -14,7 +14,7 @@ function App() {
         <AppBar sx={{ backgroundColor: "#82AAE3" }}>
           <Toolbar>
             <Typography variant="h5" sx={{ textAlign: "left", flexGrow: 1 }}>
-              Shoe Store
+              Shoe Marketplace
             </Typography>
             <Box>
               <Link to="/" style={{ textDecoration: "none", float: "right" }}>

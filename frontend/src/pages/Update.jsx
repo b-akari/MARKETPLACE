@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Typography, Button, TextField } from "@mui/material";
+import { Typography, Button, TextField, Card } from "@mui/material";
 
 const Update = () => {
   const [shoe, setShoe] = useState({
@@ -12,8 +12,8 @@ const Update = () => {
     image: "",
   });
   const navigate = useNavigate();
-  const location= useLocation();
-  const shoeId= location.pathname.split("/")[2]
+  const location = useLocation();
+  const shoeId = location.pathname.split("/")[2];
 
   const handleChange = (e) => {
     setShoe((prev) => ({ ...prev, [e.target.name]: e.target.value }));
@@ -23,21 +23,29 @@ const Update = () => {
     e.preventDefault();
     try {
       let result = await axios
-      .put(`http://localhost:8080/shoes/${shoeId}`, shoe)
-      .then((result)=> result.data)  
-      console.log(result)
-      navigate("/shoes")
+        .put(`http://localhost:8080/shoes/${shoeId}`, shoe)
+        .then((result) => result.data);
+      console.log(result);
+      navigate("/shoes");
     } catch (err) {
-      console.log(err)
+      console.log(err);
     }
-  }
+  };
   console.log(shoe);
   return (
-    <div className="form">
-      <Typography variant="h3" sx={{fontWeight: "bold"}}>
+    <Card
+      sx={{
+        display: "flex",
+        flexDirection: "column",
+        height: "100vh",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Typography variant="h3" sx={{ fontWeight: "bold" }}>
         Update
       </Typography>
-      <TextField 
+      <TextField
         id="outlined"
         type={"text"}
         label="Name"
@@ -45,7 +53,7 @@ const Update = () => {
         onChange={handleChange}
         variant="outlined"
       />
-      <TextField 
+      <TextField
         id="outlined"
         type={"text"}
         label="Description"
@@ -53,7 +61,7 @@ const Update = () => {
         onChange={handleChange}
         variant="outlined"
       />
-      <TextField 
+      <TextField
         id="outlined"
         type={"text"}
         label="Image"
@@ -61,7 +69,7 @@ const Update = () => {
         onChange={handleChange}
         variant="outlined"
       />
-      <TextField 
+      <TextField
         id="outlined"
         type={"number"}
         label="Price"
@@ -94,11 +102,15 @@ const Update = () => {
         name="price"
       /> */}
 
-      <Button onClick={handleClick} variant="contained" size="large"
-      sx={{backgroundColor: "#82AAE3"}}>
+      <Button
+        onClick={handleClick}
+        variant="contained"
+        size="large"
+        sx={{ backgroundColor: "#82AAE3" }}
+      >
         Update
       </Button>
-    </div>
+    </Card>
   );
 };
 

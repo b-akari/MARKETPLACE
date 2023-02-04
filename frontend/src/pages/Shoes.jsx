@@ -79,8 +79,9 @@ const Shoes = () => {
                     <Button
                       variant="contained"
                       sx={{
+                        textDecoration: "none",
                         backgroundColor: "#82AAE3",
-                        "&hover": { background: "#82AAE3" },
+                        "&:hover": { background: "#82AAE3" },
                       }}
                       onClick={() => handleDelete(shoe.id)}
                     >
@@ -110,7 +111,11 @@ const Shoes = () => {
 
       <Button
         variant="contained"
-        sx={{ m: "20px", backgroundColor: "#82AAE3" }}
+        sx={{
+          m: "20px",
+          backgroundColor: "#82AAE3",
+          "&:hover": { background: "#82AAE3" }
+        }}
       >
         <Link to="/add" style={{ textDecoration: "none", color: "white" }}>
           Add new Shoes
