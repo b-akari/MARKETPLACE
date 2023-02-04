@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { TextField, Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 
 const Add = () => {
   const [shoe, setShoe] = useState({
@@ -65,30 +65,33 @@ const Add = () => {
       /> */}
       <input
         type="text"
-        placeholder="name"
+        placeholder="Name"
         onChange={handleChange}
         name="prod_name"
       />
       <input
         type="text"
-        placeholder="prod_description"
+        placeholder="Description"
         onChange={handleChange}
         name="prod_description"
       />
       <input
         type="text"
-        placeholder="image"
+        placeholder="Image"
         onChange={handleChange}
         name="image"
       />
       <input
         type="number"
-        placeholder="price"
+        placeholder="Price"
         onChange={handleChange}
         name="price"
       />
 
-      <button onClick={handleClick}>Add</button>
+      <Button onClick={handleClick} variant="contained" size="large"
+      sx={{backgroundColor: "#82AAE3"}}>
+        Add
+      </Button>
     </div>
     
     

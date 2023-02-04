@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Typography } from "@mui/material";
+import { Typography, Button } from "@mui/material";
 
 const Update = () => {
   const [shoe, setShoe] = useState({
@@ -62,7 +62,10 @@ const Update = () => {
         name="price"
       />
 
-      <button onClick={handleClick}>Update</button>
+      <Button onClick={handleClick} variant="contained" size="large"
+      sx={{backgroundColor: "#82AAE3"}}>
+        Update
+      </Button>
     </div>
   );
 };

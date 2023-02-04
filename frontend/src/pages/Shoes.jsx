@@ -35,8 +35,8 @@ const Shoes = () => {
 
   return (
     <div className="home">
-      <Typography variant="h3">
-        SHOE STORE
+      <Typography variant="h3" sx={{fontWeight: "600"}}>
+        Shoe Store
       </Typography>
       <Grid container columnSpacing={2} rowSpacing={2}>
         {shoes.map((shoe) => (
@@ -53,23 +53,27 @@ const Shoes = () => {
                 <Typography variant="h6">
                   {PHPPrice.format(shoe.price)}
                 </Typography>
-                <Button
-                  variant="contained"
-                  onClick={() => handleDelete(shoe.id)}
-                >
-                  Delete
-                </Button>
-                <Button variant="contained" sx={{textDecoration: "none", color: "white"}}>
-                  <Link to={`/update/${shoe.id}`}>Update</Link>
-                </Button>
+                <div style={{display: "flex", flexDirection: "row", gap: "10px"}}>
+                  <Button sx={{backgroundColor: "#82AAE3"}}
+                    variant="contained"
+                    onClick={() => handleDelete(shoe.id)}
+                  >
+                    Delete
+                  </Button>
+                  <Button variant="contained" sx={{textDecoration: "none", backgroundColor: "#82AAE3"}}>
+                    <Link to={`/update/${shoe.id}`} style={{textDecoration: "none", color: "white"}}>
+                      Update
+                    </Link>
+                  </Button>
+                </div>
               </div>{" "}
             </Card>{" "}
           </Grid>
         ))}
       </Grid>
 
-      <Button variant="contained" sx={{m: "20px", textDecoration: "none"}}>
-        <Link to="/add">Add new Shoes</Link>
+      <Button variant="contained" sx={{m: "20px", backgroundColor: "#82AAE3"}}>
+        <Link to="/add" style={{textDecoration: "none", color: "white"}}>Add new Shoes</Link>
       </Button>
     </div>
   );
