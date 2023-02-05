@@ -43,7 +43,7 @@ const Shoes = () => {
   };
 
   return (
-    <Container>
+    <Container sx={{marginTop: "80px"}}>
       <ToggleButtonGroup
         color="primary"
         value={brand}

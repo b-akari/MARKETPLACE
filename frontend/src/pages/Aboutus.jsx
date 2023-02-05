@@ -3,9 +3,12 @@ import { Typography } from "@mui/material"
 
 const Aboutus=()=>{
     return(
-        <Typography variant="h2">
+        <div className="about-us">
+            <Typography variant="h2">
             ABOUT US PO ITO
         </Typography>
+        </div>
+        
     )
 }
 

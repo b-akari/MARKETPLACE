@@ -1,6 +1,6 @@
 .App {
   height: 100%;
-  margin-top: 80px;
+  
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,11 +46,11 @@ img {
 
 .bg {
   height: 100vh;
-  width: 100vw;
-
+  width: 100%;
+  
   background-size: cover;
   background-position: center;
-  animation: animate 20s ease-in-out infinite;
+  animation: animate 10s ease-in-out infinite;
 }
 
 @keyframes animate {
@@ -59,9 +59,13 @@ img {
     background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg1.png");
   }
   75% {
-    background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg1.png");
+    background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg2.png");
   }
   50% {
-    background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg1.png");
+    background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg3.png");
   }
+}
+
+.about-us{
+  margin-top: 80px;
 }
