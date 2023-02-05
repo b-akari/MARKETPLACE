@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useLocation, useNavigate } from "react-router-dom";
-import { Typography, Button, TextField, Card } from "@mui/material";
+import { Typography, Button, TextField } from "@mui/material";
 
 const Update = () => {
   const [shoe, setShoe] = useState({
@@ -33,16 +33,8 @@ const Update = () => {
   };
   console.log(shoe);
   return (
-    <Card
-      sx={{
-        display: "flex",
-        flexDirection: "column",
-        height: "100vh",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Typography variant="h3" sx={{ fontWeight: "bold" }}>
+    <div className="form">
+      <Typography variant="h3" sx={{ fontWeight: "bold", color: "#82AAE3" }}>
         Update
       </Typography>
       <TextField
@@ -77,40 +69,20 @@ const Update = () => {
         onChange={handleChange}
         variant="outlined"
       />
-      {/* <input
-        type="text"
-        placeholder="name"
-        onChange={handleChange}
-        name="prod_name"
-      />
-      <input
-        type="text"
-        placeholder="prod_description"
-        onChange={handleChange}
-        name="prod_description"
-      />
-      <input
-        type="text"
-        placeholder="image"
-        onChange={handleChange}
-        name="image"
-      />
-      <input
-        type="number"
-        placeholder="price"
-        onChange={handleChange}
-        name="price"
-      /> */}
 
       <Button
-        onClick={handleClick}
         variant="contained"
+        sx={{
+          textDecoration: "none",
+          backgroundColor: "#82AAE3",
+          "&:hover": { background: "#82AAE3" },
+        }}
+        onClick={handleClick}
         size="large"
-        sx={{ backgroundColor: "#82AAE3" }}
       >
         Update
       </Button>
-    </Card>
+    </div>
   );
 };
 
