@@ -43,3 +43,25 @@ img {
   padding: 40px;
   border-radius: 20px;
 }
+
+.bg {
+  height: 100vh;
+  width: 100vw;
+
+  background-size: cover;
+  background-position: center;
+  animation: animate 20s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0%,
+  100% {
+    background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg1.png");
+  }
+  75% {
+    background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg1.png");
+  }
+  50% {
+    background-image: url("D:\Github\MARKETPLACE\frontend\public\image\bg1.png");
+  }
+}
