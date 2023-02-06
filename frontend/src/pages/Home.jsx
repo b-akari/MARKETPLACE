@@ -4,29 +4,32 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-      <div className="bg">
-        <Typography
-          variant="h3"
+    <div className="bg">
+      <Typography
+        variant="h3"
+        sx={{
+          color: "#8EA7E9",
+          fontWeight: "bold",
+        }}
+      >
+        Sole Cart PH
+      </Typography>
+      <Typography variant="h5" sx={{ fontWeight: "bold", color: "#82AAE3" }}>
+        shop shoes here at a much more lower price!
+      </Typography>
+      <Link to="/shoes" style={{ textDecoration: "none" }}>
+        <Button
+          variant="contained"
           sx={{
-            marginTop: "22%",
-            color: "#82AAE3",
-            fontWeight: "bold",
+            textDecoration: "none",
+            backgroundColor: "#82AAE3",
+            "&:hover": { background: "#82AAE3" },
           }}
         >
-          Bridgete's Preloved Shoes
-        </Typography>
-        <Link to="/shoes" style={{textDecoration: "none"}}>
-          <Button
-            variant="contained"
-            sx={{
-              
-              "&hover": { backgroundColor: "#82AAE3" },
-            }}
-          >
-            Shop Now
-          </Button>
-        </Link>
-      </div>
+          Shop Now
+        </Button>
+      </Link>
+    </div>
   );
 };
 
