@@ -74,6 +74,9 @@ img {
 }
 
 .about-us{
+  align-content: center;
+  justify-content: center;
+  display: flex;
+  align-items: center;
   height: 100vh;
-  margin-top: 80px;
 }
