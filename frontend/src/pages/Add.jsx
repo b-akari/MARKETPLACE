@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { Typography, Button, TextField, Card } from "@mui/material";
+import { Typography, Button, TextField } from "@mui/material";
 
 const Add = () => {
   const [shoe, setShoe] = useState({
@@ -67,19 +67,20 @@ const Add = () => {
         onChange={handleChange}
         variant="outlined"
       />
-
-      <Button
-        variant="contained"
-        sx={{
-          textDecoration: "none",
-          backgroundColor: "#82AAE3",
-          "&:hover": { background: "#82AAE3" },
-        }}
-        onClick={handleClick}
-        size="large"
-      >
-        Add
-      </Button>
+      <div style={{ display: "flex" }}>
+        <Button
+          variant="contained"
+          sx={{
+            textDecoration: "none",
+            backgroundColor: "#82AAE3",
+            "&:hover": { background: "#82AAE3" },
+          }}
+          onClick={handleClick}
+          size="large"
+        >
+          Add
+        </Button>
+      </div>
     </div>
   );
 };

@@ -43,7 +43,7 @@ const Shoes = () => {
   };
 
   return (
-    <Container sx={{marginTop: "100px"}}>
+    <Container sx={{ marginTop: "100px" }}>
       <ToggleButtonGroup
         color="primary"
         value={brand}
@@ -114,7 +114,7 @@ const Shoes = () => {
         sx={{
           m: "20px",
           backgroundColor: "#82AAE3",
-          "&:hover": { background: "#82AAE3" }
+          "&:hover": { background: "#82AAE3" },
         }}
       >
         <Link to="/add" style={{ textDecoration: "none", color: "white" }}>

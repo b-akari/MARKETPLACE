@@ -24,7 +24,7 @@ const Aboutus = () => {
           Ana Bridgete P. Seguban <br />
           Creator
         </Typography>
-        <Typography sx={{ color: "white", textAlign: "justify", pt: 3 }}>
+        <Typography sx={{ color: "white", textAlign: "justify", pt: 3, fontSize: "1.1rem" }}>
           SoleCart PH is a shop that sells shoes at a much more lower price.
           All the shoes here are guaranteed original but we only sell 3 shoe
           brands namely Nike, Adidas, and New Balance. We do not produce them

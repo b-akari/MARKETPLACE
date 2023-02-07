@@ -33,7 +33,7 @@ img {
 
 }
 .form {
-  margin: 50px;
+  margin: 80px;
   display: flex;
   flex-direction: column;
   gap: 10px;
