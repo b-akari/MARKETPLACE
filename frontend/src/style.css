@@ -74,5 +74,6 @@ img {
 }
 
 .about-us{
+  height: 100vh;
   margin-top: 80px;
 }
