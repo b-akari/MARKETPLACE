@@ -12,7 +12,7 @@ const Home = () => {
           fontWeight: "bold",
         }}
       >
-        Sole Cart PH
+        SoleCart PH
       </Typography>
       <Typography variant="h5" sx={{ fontWeight: "bold", color: "#82AAE3" }}>
         shop shoes here at a much more lower price!

@@ -5,7 +5,6 @@ import Add from "./pages/Add";
 import Home from "./pages/Home";
 import Shoes from "./pages/Shoes";
 import Update from "./pages/Update";
-import Contacts from "./pages/Contact";
 import "./style.css";
 
 function App() {
@@ -32,11 +31,6 @@ function App() {
                 <Button sx={{ color: "white" }}>Products</Button>
               </Link>
             </Box>
-            <Box>
-              <Link to="/contact" style={{ textDecoration: "none" }}>
-                <Button sx={{ color: "white" }}>Contact Us</Button>
-              </Link>
-            </Box>
           </Toolbar>
         </AppBar>
 
@@ -44,7 +38,6 @@ function App() {
           <Route path="/" element={<Home />}></Route>
           <Route path="/shoes" element={<Shoes />}></Route>
           <Route path="/about-us" element={<Aboutus />}></Route>
-          <Route path="/contact" element={<Contacts />}></Route>
           <Route path="/add" element={<Add />}></Route>
           <Route path="/update/:id" element={<Update />}></Route>
         </Routes>
